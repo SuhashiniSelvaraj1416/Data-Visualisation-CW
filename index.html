@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>Data Visualisation</title>
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script type="text/javascript" src="./JS/constants.js"></script>
+    <style type="text/css" src="./CSS/style.css"></style>
+
+</head>
+<body>
+ 
+    <div>
+        <h1>SARS-Cov-2 - CoVID19 Pandemic around the world</h1>
+        <p>The new coronavirus, also known as COVID-19, first appeared in Wuhan, China in December 2019. 
+            By January 2020, the virus had spread to other countries and was declared a global health emergency 
+            by the World Health Organization (WHO). The virus  spread rapidly around the world, causing widespread 
+            illness and death, and was declared a pandemic by WHO in March 2020. The virus continued to spread over 
+            the next few months, with many countries imposing lockdowns and other measures to slow the spread. Development 
+            and approval of an emergency vaccine will begin in late 2020,  with commercialization efforts beginning in early 2021.
+             As of March 2023, more than 8 billion doses of the COVID-19 vaccine have been administered worldwide. 
+             However, challenges such as vaccine hesitance and misinformation are hampering immunization efforts in some parts 
+             of the world. Despite  challenges, the development and distribution of a COVID-19 vaccine has played a key role in 
+             containing the spread of the virus and mitigating its impact on global health and society.</p>
+    </div>
+    <h3>Instructions</h3>
+    <ul>
+        <li>Click on the Covid symbols on the Map to view the data of each continent. </li>
+    </ul>
+    <h4>The map shows the data points of the continents and has 
+        been added with interactive COVID-19 virus svg points that on click would generate changes. 
+        These changes are based on the continents selection and that further would show changes related to the countries of the continent clicked upon</h4>   
+    <div class="child" style="width: 100%;">
+        <div id="suhashinis_map"></div>
+        <script type="text/javascript" src="./JS/map.js"></script>
+    </div>
+
+    <div class="parent">
+        <p>The bar chart and the scatter chart here show The Total number of cases and The Relationship between the population's Gross Domestic Product (GDP) and the pandemic's spread in the top five countries of each continent.
+        </li>
+        </ul> </p>
+    </div>
+        <div align="center">
+            <button id="city1" onclick="update(data1)">City 1</button> 
+            <button id="city2" onclick="update(data2)">City 2</button> 
+            <button id="city3" onclick="update(data3)">City 3</button>
+            <button id="city4" onclick="update(data4)">City 4</button> 
+            <button id="city5" onclick="update(data6)">City 5</button>
+        </div>
+
+        <div class="child" id="suhashinis_barplot"></div>
+        <script type="text/javascript" src="./JS/barplot.js"></script>
+        <div class="child" id="suhashinis_scatter_chart"></div>
+        <script type="text/javascript" src="./JS/scatter_chart.js"></script>
+        <div>
+            <h3>Instructions</h3>
+            <ul>
+                <li>Click on the Bars to get the data of the selected country. </li>
+            </ul>
+            <p>The Area chart here shows The Total number of vaccinations and boosters of the selected country. You can switch between the data with the buttons given here.
+                The Connected scatter chart here shows the stringency index of the selected country.
+            </p>
+        </div>
+        <div class="child" id="suhashinis_area_chart">
+        <button id="vaccine">Vaccinations</button>
+        <button id="booster">Booster</button></div>
+        <script type="text/javascript" src="./JS/area_chart.js"></script>
+
+        <div class="child" id="suhashinis_connected_scatter_plot"></div>
+        <script type="text/javascript" src="./JS/connected_scatter_plot.js"></script>
+        <script type="text/javascript" src="./JS/commons.js"></script>
+        
+    </div>
+
+</body>
+</html>
