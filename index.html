@@ -61,10 +61,17 @@
             <p>The Area chart here shows The Total number of vaccinations and boosters of the selected country. You can switch between the data with the buttons given here.
                 The Connected scatter chart here shows the stringency index of the selected country.
             </p>
+            <div class="parent" >
+                    <button onclick="varArea('date',selectedCountry,ac_width,ac_height,ac_svg,'https://raw.githubusercontent.com/samarthRathi/dataVisualisationCourseWork/CW1/filtered_SI4_covid_data.csv')" id="vaccine">Vaccinations</button>
+                    <button onclick="varArea('date',selectedCountry,ac_width,ac_height,ac_svg,'https://raw.githubusercontent.com/samarthRathi/dataVisualisationCourseWork/CW1/filtered_world8_covid_data.csv')" align="left" id="booster">Booster</button>
+                </div>
+
+            </div>
+            
         </div>
-        <div class="child" id="suhashinis_area_chart">
-        <button id="vaccine">Vaccinations</button>
-        <button id="booster">Booster</button></div>
+        
+
+        <div class="child" id="suhashinis_area_chart"></div>
         <script type="text/javascript" src="./JS/area_chart.js"></script>
 
         <div class="child" id="suhashinis_connected_scatter_plot"></div>

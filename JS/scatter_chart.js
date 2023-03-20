@@ -20,10 +20,13 @@ function varScatter(scatterPath, scatFilter, s_svg, s_width, s_height, s_margin 
 
     const scatterData = data.filter(d => d.Continent === scatFilter);
     console.log(scatterData)
+    let max_x_domain= d3.max(scatterData, (d) => d.total_cases)
+    max_x_domain=46232660
+    //max_x_domain=max_x_domain//+(max_x_domain/100)
   
     // Add X axis
       const sc_x = d3.scaleLinear()
-      .domain([0, d3.max(scatterData, (d) => d.total_cases)])
+      .domain([0, max_x_domain])
       .range([ 0, s_width ]);
     s_svg.append("g")
       .attr("class", "myXaxis")   // Note that here we give a class to the X axis, to be able to call it later and modify it
@@ -50,7 +53,7 @@ function varScatter(scatterPath, scatFilter, s_svg, s_width, s_height, s_margin 
         .style("fill", "Green")
 
       // new X axis
-      sc_x.domain([0, d3.max(scatterData, (d) => d.total_cases)])
+      sc_x.domain([0, max_x_domain])
       s_svg.select(".myXaxis")
         .transition()
         .duration(2000)

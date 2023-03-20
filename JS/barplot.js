@@ -77,9 +77,10 @@ plot_svg.selectAll("rect")
     plot_svg.selectAll("rect")
     .on("click", function() {
       selectedCountry = d3.select(this).attr("id");
+      
       varArea("date",selectedCountry,ac_width,ac_height,ac_svg,"https://raw.githubusercontent.com/samarthRathi/dataVisualisationCourseWork/CW1/filtered_SI4_covid_data.csv")
-      c_scat("https://raw.githubusercontent.com/SuhashiniSelvaraj1416/Data-Visualisation-CW/main/stringency_index.csv", selectedCountry, csp_svg, csp_width, csp_height, csp_margin)
-
+      c_scat("https://raw.githubusercontent.com/samarthRathi/dataVisualisationCourseWork/CW1/filtered_world8_covid_data.csv", selectedCountry, csp_svg, csp_width, csp_height, csp_margin)
+      console.log("Test")
     });
 
   });
